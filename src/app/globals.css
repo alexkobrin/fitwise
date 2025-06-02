@@ -44,72 +44,127 @@
 }
 
 :root {
+  /* Base Variables */
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+
+  /* Digit Theme Colors */
+  --digit-black: #0a0a23;
+  --digit-dark: #181825;
+  --digit-blue-bright: #00eaff;
+  --digit-blue: #1e90ff;
+  --digit-blue-dark: #0a3d62;
+  --digit-blue-glow: #3ec6ff;
+  --digit-accent: #ff00cc;
+
+  /* Background */
+  --background: var(--digit-dark);
+  --foreground: #e0e0e0;
+
+  /* Card and popover elements */
+  --card: #232347;
+  --card-foreground: #e0e0e0;
+  --popover: #232347;
+  --popover-foreground: #e0e0e0;
+
+  /* Primary - Main blue */
+  --primary: var(--digit-blue-bright);
+  --primary-foreground: var(--digit-dark);
+
+  /* Secondary - Darker blue */
+  --secondary: var(--digit-blue);
+  --secondary-foreground: #ffffff;
+
+  /* Accent - Magenta with glow */
+  --accent: var(--digit-accent);
+  --accent-foreground: var(--digit-dark);
+
+  /* Muted elements */
+  --muted: #22223b;
+  --muted-foreground: #a0aec0;
+
+  /* System colors */
+  --destructive: #ff4b5c;
+  --border: rgba(0, 234, 255, 0.2);
+  --input: rgba(0, 234, 255, 0.2);
+  --ring: var(--digit-blue);
+
+  /* Chart colors - digit theme */
+  --chart-1: var(--digit-blue-bright);
+  --chart-2: #38b6ff;
+  --chart-3: var(--digit-blue);
+  --chart-4: #00bcd4;
+  --chart-5: #0077b6;
+
+  /* Sidebar colors */
+  --sidebar: var(--digit-dark);
+  --sidebar-foreground: #e0e0e0;
+  --sidebar-primary: var(--digit-blue-bright);
+  --sidebar-primary-foreground: var(--digit-dark);
+  --sidebar-accent: var(--digit-blue);
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: rgba(0, 234, 255, 0.2);
+  --sidebar-ring: var(--digit-blue);
+
+  /* Custom Digit UI Variables */
+  --digit-grid-color: rgba(0, 234, 255, 0.05);
+  --digit-glow-primary: rgba(0, 234, 255, 0.2);
+  --digit-glow-strong: rgba(0, 234, 255, 0.5);
+  --digit-line-color: rgba(0, 234, 255, 0.3);
+  --digit-terminal-bg: rgba(10, 10, 35, 0.7);
+  --digit-text-bright: #ffffff;
+  --digit-text-muted: rgba(224, 224, 224, 0.7);
+  --digit-text-dim: rgba(224, 224, 224, 0.5);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  /* Background */
+  --background: var(--digit-dark);
+  --foreground: #e0e0e0;
+
+  /* Card and popover elements */
+  --card: #232347;
+  --card-foreground: #e0e0e0;
+  --popover: #232347;
+  --popover-foreground: #e0e0e0;
+
+  /* Primary - Main blue */
+  --primary: var(--digit-blue-bright);
+  --primary-foreground: var(--digit-dark);
+
+  /* Secondary - Darker blue */
+  --secondary: var(--digit-blue);
+  --secondary-foreground: #ffffff;
+
+  /* Accent - Magenta with glow */
+  --accent: var(--digit-accent);
+  --accent-foreground: var(--digit-dark);
+
+  /* Muted elements */
+  --muted: #22223b;
+  --muted-foreground: #a0aec0;
+
+  /* System colors */
+  --destructive: #ff4b5c;
+  --border: rgba(0, 234, 255, 0.2);
+  --input: rgba(0, 234, 255, 0.2);
+  --ring: var(--digit-blue);
+
+  /* Chart colors - digit theme */
+  --chart-1: var(--digit-blue-bright);
+  --chart-2: #38b6ff;
+  --chart-3: var(--digit-blue);
+  --chart-4: #00bcd4;
+  --chart-5: #0077b6;
+
+  /* Sidebar colors */
+  --sidebar: var(--digit-dark);
+  --sidebar-foreground: #e0e0e0;
+  --sidebar-primary: var(--digit-blue-bright);
+  --sidebar-primary-foreground: var(--digit-dark);
+  --sidebar-accent: var(--digit-blue);
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: rgba(0, 234, 255, 0.2);
+  --sidebar-ring: var(--digit-blue);
 }
 
 @layer base {
@@ -119,4 +174,77 @@
   body {
     @apply bg-background text-foreground;
   }
+  /* https://tailwindcss.com/docs/upgrade-guide#buttons-use-the-default-cursor */
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
 }
+
+/*  animation  */
+
+@keyframes scanline {
+  0% {
+    background-position: 0 0;
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    background-position: 0 100%;
+    opacity: 0.7;
+  }
+}
+
+@keyframes slow-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-scanline {
+  animation: scanline 12s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.animate-slow-spin {
+  animation: slow-spin 18s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes sound-wave {
+  0% {
+    height: 10%;
+    opacity: 0.6;
+  }
+  50% {
+    height: 100%;
+    opacity: 1;
+  }
+  100% {
+    height: 10%;
+    opacity: 0.6;
+  }
+}
+
+.animate-sound-wave {
+  animation: sound-wave 1.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    filter: blur(2px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
