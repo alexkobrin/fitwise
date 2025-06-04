@@ -1,6 +1,13 @@
-import { clerkMiddleware } from '@clerk/nextjs/server';
+import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
+ 
+const isAthenticated  =  createRouteMatcher(['/profile', '/generate-program'])
 
-export default clerkMiddleware();
+export default clerkMiddleware(async (auth ,req) => {
+  console.log(auth , "auth middleware called");
+  
+  if( isAthenticated(req))  await auth.protect();
+
+});
 
 export const config = {
   matcher: [
