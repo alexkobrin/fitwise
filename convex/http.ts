@@ -21,15 +21,15 @@ http.route({
         status: 400,
       });
     }
-    const payload = await request.text();
-    const body = JSON.parse(payload);
+    const payload = await request.json();
+    const body = JSON.stringify(payload);
 
     const wh = new Webhook(webhookSecret);
     let evt: WebhookEvent;
     try {
       evt = wh.verify(body, {
-        svix_id: svix_id,
-        svix_timestamp: svix_timestamp,
+        "svix-id": svix_id,
+        "svix-timestamp": svix_timestamp,
         "svix-signature": svix_signature,
       }) as WebhookEvent;
     } catch (e) {
