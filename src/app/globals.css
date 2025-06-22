@@ -165,6 +165,17 @@
   --sidebar-accent-foreground: #ffffff;
   --sidebar-border: rgba(0, 234, 255, 0.2);
   --sidebar-ring: var(--digit-blue);
+
+
+  /* Custom Cyberpunk UI Variables */
+  --cyber-grid-color: rgba(24, 206, 242, 0.05);
+  --cyber-glow-primary: rgba(24, 206, 242, 0.2);
+  --cyber-glow-strong: rgba(24, 206, 242, 0.5);
+  --cyber-line-color: rgba(24, 206, 242, 0.3);
+  --cyber-terminal-bg: rgba(0, 0, 0, 0.7);
+  --cyber-text-bright: #ffffff;
+  --cyber-text-muted: rgba(242, 242, 242, 0.7);
+  --cyber-text-dim: rgba(242, 242, 242, 0.5);
 }
 
 @layer base {
