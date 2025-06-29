@@ -102,8 +102,9 @@ const GenerateProgramPage = () => {
         setCallEnded(false);
         const  fullName = user?.firstName ? `${user?.firstName || ""} ${user?.lastName || ""}`.trim() : "Anonimous User";
 
-        await vapi.start(process.env.NEXT_PUBLIC_VAPI_WORKFLOW_ID!, {
+        await vapi.start(process.env.NEXT_PUBLIC_VAPI_ASISTANT_ID!, {
           variableValues: {
+            workflow_id: process.env.NEXT_PUBLIC_VAPI_WORKFLOW_ID! ,
             full_name: fullName,
           },
         });
